@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body{
+  background: #eee;
+ font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  position: absolute;
+  background: #fff;
+  width: 18rem;
+  height: 10rem;
+  padding: 20px 30px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container h3,
+.fa-link{
+  padding-top: 22px;
+  margin: 10px;
+}
+
+ .input input{
+  background: #fff;
+  border: 1px solid purple;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.input button{
+  position: relative;
+  background: purple;
+  color: #fff;
+  padding: 7px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.input button:before{
+  content: "copied";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: purple;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+}
+ .input button:after{
+  content: '';
+  position: absolute;
+  top: -32px;
+  right: 17px;
+  width: 10px;
+  height: 10px;
+  background: purple;
+  transform: rotate(45deg);
+  display: none;
+}
+.input.active  button:before,
+.input.active button:after{
+  display: block;
+}
+.fa-clone{
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
